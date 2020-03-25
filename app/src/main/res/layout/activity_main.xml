@@ -79,7 +79,13 @@ tools:context=".MainActivity" >
     android:textColor="@color/whiteColor"
     />
 
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        app:srcCompat="@drawable/ic_check"
+        android:layout_marginTop="80dp"/>
 
 
 <LinearLayout
