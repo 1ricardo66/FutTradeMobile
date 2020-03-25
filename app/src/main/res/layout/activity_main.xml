@@ -70,6 +70,7 @@ tools:context=".MainActivity" >
     />
 
 <TextView
+    android:id="@+id/textLucro"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Lucro: 450 coins"
@@ -80,7 +81,7 @@ tools:context=".MainActivity" >
     />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/okBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center"
