@@ -3,4 +3,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="grayColor">#4A4A4A</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="cinzaClaro">#606060</color>
+    <color name="cinzaMedio">#686464</color>
+
 </resources>
