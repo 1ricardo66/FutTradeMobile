@@ -24,8 +24,8 @@ public class HomeFragment extends Fragment {
         // Required empty public constructor
     }
 
-    EditText textName,textValorCompra,textValorVenda;
-    TextView textLucro;
+    private EditText textName,textValorCompra,textValorVenda;
+    private TextView textLucro;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-    public void setLucro(double lucro){
+    private void setLucro(double lucro){
 
         if(lucro > 0){
 
@@ -73,7 +73,7 @@ public class HomeFragment extends Fragment {
 
     }
 
-    public double calcularLucro(){
+    private double calcularLucro(){
         double lucro;
         int compra = Integer.parseInt(textValorCompra.getText().toString());
         int venda = Integer.parseInt(textValorVenda.getText().toString());
