@@ -1,4 +1,4 @@
-package br.com.ricardofelix.futtrademobile.activity;
+package br.com.ricardofelix.futtrademobile.fragment;
 
 import android.os.Bundle;
 
