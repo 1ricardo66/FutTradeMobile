@@ -1,4 +1,4 @@
-package br.com.ricardofelix.futtrademobile;
+package br.com.ricardofelix.futtrademobile.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import br.com.ricardofelix.futtrademobile.R;
 
 public class MainActivity extends AppCompatActivity {
     EditText textName,textValorCompra,textValorVenda;
@@ -63,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
         int venda = Integer.parseInt(textValorVenda.getText().toString());
         lucro = (float) 5 / 100 * venda;
         Toast.makeText(this, compra+" - "+venda+"\n"+lucro, Toast.LENGTH_SHORT).show();
-        //5/100*10000
         lucro =  venda - lucro - compra;
 
         lucro = Math.round(lucro);
