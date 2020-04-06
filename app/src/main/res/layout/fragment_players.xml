@@ -6,6 +6,7 @@
     tools:context=".fragment.PlayersFragment">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPlayers"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>
