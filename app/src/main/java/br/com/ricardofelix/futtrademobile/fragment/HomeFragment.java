@@ -14,7 +14,9 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import br.com.ricardofelix.futtrademobile.Helper.PlayerDAO;
 import br.com.ricardofelix.futtrademobile.R;
+import br.com.ricardofelix.futtrademobile.model.Player;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -52,6 +54,8 @@ public class HomeFragment extends Fragment {
 
     private void setLucro(double lucro){
 
+
+
         if(lucro > 0){
 
             textLucro.setTextColor(Color.GREEN);
@@ -74,6 +78,9 @@ public class HomeFragment extends Fragment {
     }
 
     private double calcularLucro(){
+        PlayerDAO pDAO = new PlayerDAO(getActivity().getApplicationContext());
+        Player player = new Player();
+        String name = textName.getText().toString();
         double lucro;
         int compra = Integer.parseInt(textValorCompra.getText().toString());
         int venda = Integer.parseInt(textValorVenda.getText().toString());
@@ -82,6 +89,13 @@ public class HomeFragment extends Fragment {
         lucro =  venda - lucro - compra;
 
         lucro = Math.round(lucro);
+
+        player.setName(name);
+        player.setBuyPrice(compra);
+        player.setSellPrice(venda);
+        player.setProfit(lucro);
+
+        pDAO.savePlayer(player);
 
         return lucro;
 

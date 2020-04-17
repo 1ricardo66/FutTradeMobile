@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/playerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome:" />
+
+    <TextView
+        android:id="@+id/playerBuyPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compra:" />
+
+    <TextView
+        android:id="@+id/playerSellPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Venda:" />
+
+    <TextView
+        android:id="@+id/playerProfit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lucro:" />
+
+</LinearLayout>

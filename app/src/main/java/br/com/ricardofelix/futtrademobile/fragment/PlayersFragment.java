@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import br.com.ricardofelix.futtrademobile.Helper.PlayerDAO;
 import br.com.ricardofelix.futtrademobile.R;
 import br.com.ricardofelix.futtrademobile.adapter.PlayersAdapter;
 
@@ -23,12 +24,25 @@ public class PlayersFragment extends Fragment {
     }
 
     RecyclerView recyclerPlayers;
+    View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_players, container, false);
-        PlayersAdapter playersAdapter = new PlayersAdapter();
+         view =  inflater.inflate(R.layout.fragment_players, container, false);
+
+
+
+
+
+
+        return view;
+    }
+
+
+    public void createList(){
+        PlayerDAO pDao = new PlayerDAO(getActivity().getApplicationContext());
+        PlayersAdapter playersAdapter = new PlayersAdapter(pDao.listPlayer());
 
 
         recyclerPlayers = view.findViewById(R.id.recyclerPlayers);
@@ -37,11 +51,17 @@ public class PlayersFragment extends Fragment {
         recyclerPlayers.setLayoutManager(layoutManager);
         recyclerPlayers.setHasFixedSize(true);
         recyclerPlayers.setAdapter(playersAdapter);
-
-
-
-
-
-        return view;
     }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser)
+    {
+        super.setUserVisibleHint(isVisibleToUser);
+        if(isVisibleToUser)
+        {
+            createList();
+        }
+    }
+
+
 }
